@@ -40,24 +40,11 @@
     </scm>
 
     <repositories>
-        <repository>
-            <id>jide</id>
-            <name>Internal JIDE repository</name>
-            <url>https://mvnrepository.com/artifact/</url>
-        </repository>
-        <repository>
-            <id>bc-mvn-repo-http</id>
-            <name>Public Maven Repository at Brockmann Consult</name>
-            <url>http://www.brockmann-consult.de/mvn/os</url>
-            <releases>
-                <enabled>true</enabled>
-                <checksumPolicy>warn</checksumPolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <checksumPolicy>warn</checksumPolicy>
-            </snapshots>
-        </repository>
+         <repository>
+             <id>seadas-repo</id>
+             <name>NASA SeaDAS repository</name>
+             <url>https://seadas.gsfc.nasa.gov/mvn-seadas</url>
+         </repository>
     </repositories>
 
     <distributionManagement>
