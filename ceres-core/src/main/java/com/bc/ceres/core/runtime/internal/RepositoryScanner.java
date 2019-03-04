@@ -110,16 +110,17 @@ public class RepositoryScanner {
     }
 
     private void collectModule(String href, List<Module> repositoryModules) {
-        if (href.startsWith("http:")) {
+        if (href.startsWith("https:") || !href.contains(url.getPath())) {
             return;
         }
-        String moduleName = href;
+        String moduleName = href.substring((url.getPath().length()));
         if (moduleName.startsWith("/")) {
             moduleName = moduleName.substring(1);
         }
         if (moduleName.endsWith("/")) {
             moduleName = moduleName.substring(0, moduleName.length() - 1);
         }
+
 
         String urlString = url.toExternalForm();
         if (!urlString.endsWith("/")) {
